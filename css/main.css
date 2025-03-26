@@ -94,7 +94,7 @@ body {
   }
 
   .prayerHeader {
-    margin-top: 1.875rem;
+    margin-top: 0.625rem;
     font-family: bold !important;
   }
 
@@ -110,7 +110,7 @@ body {
 
   input {
     width: 50%;
-    margin-top: 1.25rem;
+    margin-top: 0.625rem;
     border: none;
     outline: none;
     border-radius: 0.625rem;
@@ -152,7 +152,7 @@ body {
   }
 
   .prayer {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.625rem;
     justify-content: center;
     align-items: center;
     gap: 0.313rem;
