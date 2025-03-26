@@ -21,7 +21,6 @@ function getUserLocation() {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
         getWeatherData(lat, lon);
-        calculateQiblaDirection(lat, lon);
       },
       // location bloced by user
       () => {
@@ -46,45 +45,7 @@ function getCityCoords(city) {
 
       document.getElementById("city").value = data.name;
       getWeatherData(lat, lon);
-      calculateQiblaDirection(lat, lon);
     });
-}
-
-// calculat qibla angle
-let qiblaAngle = 0;
-function calculateQiblaDirection(lat, lon) {
-  const kaabaLat = 21.4225;
-  const kaabaLon = 39.8262;
-
-  const phi1 = (lat * Math.PI) / 180;
-  const phi2 = (kaabaLat * Math.PI) / 180;
-  const deltaLambda = ((kaabaLon - lon) * Math.PI) / 180;
-
-  const y = Math.sin(deltaLambda) * Math.cos(phi2);
-  const x =
-    Math.cos(phi1) * Math.sin(phi2) -
-    Math.sin(phi1) * Math.cos(phi2) * Math.cos(deltaLambda);
-  const theta = Math.atan2(y, x);
-  qiblaAngle = ((theta * 180) / Math.PI + 360) % 360;
-}
-
-// update compass rotation
-function updateCompass(event) {
-  if (event.alpha !== null) {
-    let compassHeading = 360 - event.alpha;
-    let qiblaDirection = (qiblaAngle - compassHeading + 360) % 360;
-    document.getElementById(
-      "compass"
-    ).style.transform = `rotate(${qiblaDirection}deg)`;
-  }
-}
-
-function startCompass() {
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", updateCompass);
-  } else {
-    alert("Your device does not support compass sensors.");
-  }
 }
 
 // get weather data

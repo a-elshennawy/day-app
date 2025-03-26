@@ -172,20 +172,17 @@ body {
   }
 }
 
-.toQuran {
+.quran {
   margin-bottom: 1.25rem;
-  width: fit-content;
-  filter: drop-shadow(0 0 0.625rem #fff);
 
-  img {
-    width: 10%;
+  .toQuran {
+    width: fit-content;
+    filter: drop-shadow(0 0 0.625rem #fff);
+
+    img {
+      width: 20%;
+    }
   }
-}
-
-.compass img {
-  width: 5%;
-  transform-origin: center;
-  transition: transform 0.5s ease-in-out;
 }
 
 /* responsive */
