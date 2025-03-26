@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="this is an app i created to be a daily friend of yours to give weather forcast and azan times"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/logo.favicon" />
+    <title>Your Day</title>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+
+    <div class="bigBG"></div>
+    <div class="smallBG"></div>
+    <div class="container">
+      <div class="innerPanel row">
+        <div class="col-10">
+          <input id="city" type="search" placeholder="city seacrh" />
+        </div>
+        <!-- weather -->
+        <div class="col-12">
+          <h3 class="cityindicate"><span id="cityindicate"></span></h3>
+        </div>
+        <div class="currweatherItem col-3">
+          <span id="temp">
+            <!-- data from js -->
+          </span>
+        </div>
+        <div class="currweatherItem col-3">
+          <span id="airPressure">
+            <!-- data from js -->
+          </span>
+        </div>
+        <div class="currweatherItem col-3">
+          <span id="windSpeed">
+            <!-- data from js -->
+          </span>
+        </div>
+        <div class="currweatherItem col-3">
+          <span id="weatherDesc">
+            <!-- data from js -->
+          </span>
+        </div>
+        <!-- weather forecast -->
+        <div id="weatherForecast" class="weatherForecast col-12 row">
+          <!-- data from js -->
+        </div>
+        <!-- paryers times -->
+        <div class="col-12">
+          <h3 class="prayerHeader">paryers time</h3>
+          <h4 id="currTime">
+            <!-- data from js -->
+          </h4>
+        </div>
+        <div id="prayer" class="prayer col-12 row">
+          <!-- data from js -->
+        </div>
+        <!-- to quran webApp -->
+        <a
+          href="https://randomquranayat.netlify.app/"
+          target="_blank"
+          class="toQuran"
+        >
+          <img src="img/quran.png" alt="" />
+        </a>
+        <div class="col-12">
+          <h3>Qibla Direction</h3>
+          <div class="qibla-container">
+            <div class="compass">
+              <img
+                id="compass"
+                src="img/icons8-qibla-direction-32.png"
+                alt="Compass"
+              />
+            </div>
+            <p>Move your device to find Qibla direction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
