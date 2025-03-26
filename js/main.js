@@ -129,7 +129,7 @@ async function getWeatherData(lat, lon) {
     .join("");
 }
 
-// City search event listener
+// City search 
 document
   .getElementById("city")
   .addEventListener("keypress", async function (event) {
@@ -138,8 +138,8 @@ document
     }
   });
 
-// Start the app
+// Arise 💀
 (async function init() {
-  await getUserLocation(); // Wait for location & API data to load
-  hideLoader(); // Hide the loader after everything is ready
+  await getUserLocation(); // API done ?
+  hideLoader(); // Hide loader 
 })();
