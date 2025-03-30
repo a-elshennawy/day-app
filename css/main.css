@@ -170,17 +170,18 @@ body {
       }
     }
   }
-}
+  .linkGrp {
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    margin: 1.25rem 0rem;
 
-.quran {
-  margin-bottom: 1.25rem;
-
-  .toQuran {
-    width: fit-content;
-    filter: drop-shadow(0 0 0.625rem #fff);
-
-    img {
-      width: 20%;
+    .link {
+      text-decoration: none;
+      filter: drop-shadow(0 0 0.625rem #fff);
+      img {
+        width: 100%;
+      }
     }
   }
 }
