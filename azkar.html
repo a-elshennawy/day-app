@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/azkar.css" />
-    <link rel="icon" href="img/icons8-islamic-32.png" />
+    <link rel="icon" href="img/icons8-islamic-32.ico" />
     <title>Day App - Azkar</title>
   </head>
   <body>
+    <!-- loader -->
+    <div class="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+    <!-- stuff -->
+    <div class="bigBG"></div>
+    <div class="smallBG"></div>
+    <div class="container">
+      <div class="row azkarBtns">
+        <button id="sabah" class="col-10">أذكار الصباح</button>
+        <button id="masa" class="col-10">أذكار المساء</button>
+        <button id="prayer" class="col-10">أذكار بعد الصلاه</button>
+      </div>
+    </div>
+    <div id="zekrContainer" class="zekrContainer d-none">
+      <!-- data from js -->
+    </div>
 
-
-
-
-
-
-
-
-
+    <!-- script -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/azkar.js"></script>
   </body>
 </html>

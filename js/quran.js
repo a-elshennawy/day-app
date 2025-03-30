@@ -1,3 +1,13 @@
+// loader
+function hideLoader() {
+  document.querySelector(".loader").style.transition = "opacity 1s";
+  document.querySelector(".loader").style.opacity = "0";
+
+  setTimeout(() => {
+    document.querySelector(".loader").style.display = "none";
+  }, 1000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn").addEventListener("click", fetchRandomAyah);
 });
@@ -13,6 +23,7 @@ async function fetchRandomAyah() {
     if (data.data) {
       let arabicAyah = data.data[0].text;
       document.getElementById("ayah").innerText = `" ${arabicAyah} "`;
+      hideLoader();
     } else {
       console.error("Error getting data");
     }
