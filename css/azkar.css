@@ -139,7 +139,7 @@ body {
       .nav {
         img {
           margin: auto;
-          width: 100%;
+          width: 30%;
           cursor: pointer;
         }
       }
@@ -159,6 +159,20 @@ body {
 
   .bigBG {
     display: none;
+  }
+
+  .zekrContainer {
+    .inner {
+      .content {
+        .nav {
+          img {
+            margin: auto;
+            width: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }
 
