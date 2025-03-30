@@ -170,6 +170,27 @@ body {
       }
     }
   }
+
+  .date {
+    justify-content: center;
+    align-items: center;
+    margin: 1.25rem 0rem;
+    gap: 0.625rem;
+
+    .innerDate {
+      font-family: bold !important;
+      background-color: transparent;
+      color: #fff;
+      padding: 0.313rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 0 625rem #fff;
+
+      img {
+        margin: 0rem 0.313rem;
+      }
+    }
+  }
+
   .linkGrp {
     justify-content: center;
     align-items: center;

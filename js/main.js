@@ -104,6 +104,21 @@ async function getWeatherData(lat, lon) {
     `https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lon}&method=5`
   );
   const data = await prayerResponse.json();
+
+  let hijriDate = data.data.date.hijri;
+  let hijriFormatted = `${hijriDate.day} ${hijriDate.month.en} ${hijriDate.year}`;
+
+  let miladiDate = data.data.date.gregorian;
+  let miladiFormatted = `${miladiDate.day} ${miladiDate.month.en} ${miladiDate.year}`;
+
+  document.getElementById(
+    "hijriDate"
+  ).innerHTML = `<img src="img/icons8-date-16.png" alt="" /> ${hijriFormatted}`;
+
+  document.getElementById(
+    "miladiDate"
+  ).innerHTML = `<img src="img/icons8-date-16.png" alt="" /> ${miladiFormatted}`;
+
   const icons = [
     "img/icons8-dawn-16.png",
     "img/icons8-sunrise-16.png",
@@ -129,7 +144,7 @@ async function getWeatherData(lat, lon) {
     .join("");
 }
 
-// City search 
+// City search
 document
   .getElementById("city")
   .addEventListener("keypress", async function (event) {
@@ -141,5 +156,5 @@ document
 // Arise 💀
 (async function init() {
   await getUserLocation(); // API done ?
-  hideLoader(); // Hide loader 
+  hideLoader(); // Hide loader
 })();
