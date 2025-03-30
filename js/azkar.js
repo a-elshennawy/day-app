@@ -34,11 +34,11 @@ async function fetchAzkar(jsonFile) {
           <img id="closeBtn" class="closeBtn" src="img/circle-x.svg" />
         </div>
         <div class="content row col-12">
-          <div class="nav col-1">
+          <div class="nav col-2">
             <img id="previousZekr" src="img/circle-arrow-left.svg" />
           </div>
-          <p class="col-10">${azkarData[currentIndex].zekr}</p>
-          <div class="nav col-1">
+          <p class="col-8">${azkarData[currentIndex].zekr}</p>
+          <div class="nav col-2">
             <img id="nextZekr" src="img/circle-arrow-right.svg" />
           </div>
           <p class="col-10">${azkarData[currentIndex].repeat} مرات</p>
