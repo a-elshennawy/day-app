@@ -139,7 +139,7 @@ body {
       .nav {
         img {
           margin: auto;
-          width: 40%;
+          width: 100%;
           cursor: pointer;
         }
       }
