@@ -7,3 +7,8 @@
   font-family: reg;
   src: url(../css/fonts/Ubuntu-Regular.ttf);
 }
+
+@font-face {
+  font-family:Amiri ;
+  src: url(../css/fonts/Amiri-Regular.ttf);
+}
